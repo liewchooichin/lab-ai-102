@@ -1,0 +1,13 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+      // Azure CLI
+      "ghcr.io/devcontainers/features/azure-cli:1": {
+          "version": "default"
+      },
+      // Python Launcher
+      "ghcr.io/oleksis/devcontainer-features/python-launcher:1": {
+          "version": "default";
+      }
+  }
+}
