@@ -20,9 +20,14 @@ def main():
         app_password = os.getenv('APP_PASSWORD')
 
         # Get Azure AI services key from keyvault using the service principal credentials
-        key_vault_uri = f"https://{key_vault_name}.vault.azure.net/"
+        # I have put the key vault uri directly in the secrets. So, there is no need
+        # to format the key vault uri. This is to make the key vault uri uniform as
+        # the API service endpoint.
+        #key_vault_uri = f"https://{key_vault_name}.vault.azure.net/"
         credential = ClientSecretCredential(app_tenant, app_id, app_password)
-        keyvault_client = SecretClient(key_vault_uri, credential)
+        # Like above, the key vault uri is directly accessed from the secrets.
+        #keyvault_client = SecretClient(key_vault_uri, credential)
+        keyvault_client = SecretClient(key_vault_name, credential)
         secret_key = keyvault_client.get_secret("AI-Services-Key")
         cog_key = secret_key.value
 
