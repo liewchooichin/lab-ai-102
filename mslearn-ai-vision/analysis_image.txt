@@ -1,0 +1,57 @@
+images/street.jpg
+
+Analyzing image...
+
+Caption:
+ Caption: 'a man walking a dog on a leash on a street' (confidence: 82.06%)
+
+Dense Captions:
+ Caption: 'a man walking a dog on a leash on a street' (confidence: 82.06%)
+ Caption: 'a man walking on a street' (confidence: 69.02%)
+ Caption: 'a yellow car on the street' (confidence: 78.17%)
+ Caption: 'a black dog walking on the street' (confidence: 75.33%)
+ Caption: 'a blurry image of a blue car' (confidence: 82.01%)
+ Caption: 'a yellow taxi cab on the street' (confidence: 72.39%)
+
+Tags:
+ Tag: 'outdoor' (confidence: 99.87%)
+ Tag: 'land vehicle' (confidence: 99.02%)
+ Tag: 'vehicle' (confidence: 98.89%)
+ Tag: 'building' (confidence: 98.55%)
+ Tag: 'road' (confidence: 95.98%)
+ Tag: 'wheel' (confidence: 95.14%)
+ Tag: 'street' (confidence: 94.71%)
+ Tag: 'person' (confidence: 93.01%)
+ Tag: 'clothing' (confidence: 91.19%)
+ Tag: 'taxi' (confidence: 90.95%)
+ Tag: 'car' (confidence: 84.01%)
+ Tag: 'dog' (confidence: 82.68%)
+ Tag: 'yellow' (confidence: 77.08%)
+ Tag: 'walking' (confidence: 74.11%)
+ Tag: 'city' (confidence: 64.80%)
+ Tag: 'woman' (confidence: 57.53%)
+
+Objects in image:
+ car (confidence: 72.40%)
+ taxi (confidence: 77.00%)
+ person (confidence: 78.10%)
+ dog (confidence: 54.40%)
+  Results saved in objects.jpg
+
+People in image:
+ {'x': 241, 'y': 109, 'w': 155, 'h': 399} (confidence: 94.99%)
+ {'x': 396, 'y': 264, 'w': 23, 'h': 58} (confidence: 24.93%)
+ {'x': 699, 'y': 262, 'w': 20, 'h': 33} (confidence: 22.45%)
+ {'x': 138, 'y': 230, 'w': 28, 'h': 31} (confidence: 6.96%)
+ {'x': 129, 'y': 188, 'w': 15, 'h': 26} (confidence: 1.09%)
+ {'x': 146, 'y': 188, 'w': 16, 'h': 25} (confidence: 1.02%)
+ {'x': 405, 'y': 263, 'w': 15, 'h': 28} (confidence: 0.96%)
+ {'x': 164, 'y': 187, 'w': 17, 'h': 25} (confidence: 0.84%)
+ {'x': 176, 'y': 187, 'w': 13, 'h': 25} (confidence: 0.45%)
+ {'x': 139, 'y': 186, 'w': 42, 'h': 29} (confidence: 0.19%)
+ {'x': 510, 'y': 262, 'w': 17, 'h': 10} (confidence: 0.12%)
+ {'x': 247, 'y': 247, 'w': 141, 'h': 121} (confidence: 0.11%)
+  Results saved in people.jpg
+
+Removing background from image...
+  Results saved in backgroundForeground.png 
