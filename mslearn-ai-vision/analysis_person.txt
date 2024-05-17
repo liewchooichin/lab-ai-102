@@ -1,0 +1,37 @@
+images/person.jpg
+
+Analyzing image...
+
+Caption:
+ Caption: 'a man in a suit' (confidence: 78.54%)
+
+Dense Captions:
+ Caption: 'a man in a suit' (confidence: 78.54%)
+ Caption: 'a man in a suit giving a thumbs up' (confidence: 80.96%)
+
+Tags:
+ Tag: 'clothing' (confidence: 99.72%)
+ Tag: 'person' (confidence: 99.33%)
+ Tag: 'human face' (confidence: 98.89%)
+ Tag: 'man' (confidence: 94.58%)
+ Tag: 'orator' (confidence: 90.42%)
+ Tag: 'glasses' (confidence: 89.57%)
+ Tag: 'speech' (confidence: 89.33%)
+ Tag: 'spokesperson' (confidence: 88.82%)
+ Tag: 'public speaking' (confidence: 85.86%)
+ Tag: 'shirt' (confidence: 85.21%)
+ Tag: 'gentleman' (confidence: 85.02%)
+ Tag: 'suit' (confidence: 84.60%)
+ Tag: 'healthcare' (confidence: 41.78%)
+
+Objects in image:
+ person (confidence: 87.50%)
+  Results saved in objects.jpg
+
+People in image:
+ {'x': 69, 'y': 113, 'w': 539, 'h': 418} (confidence: 97.16%)
+ {'x': 215, 'y': 189, 'w': 284, 'h': 257} (confidence: 0.52%)
+  Results saved in people.jpg
+
+Removing background from image...
+  Results saved in backgroundForeground.png 
