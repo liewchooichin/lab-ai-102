@@ -145,11 +145,9 @@ def AnalyzeImage(image_filename, image_data, cv_client):
 
 
 # To remove background
-def which_background_mode(mode="backgroundRemoval",
-                           api_version=api_version,
-                           endpoint=endpoint,
-                           key=key,
-                           image_file=image_file):
+def which_background_mode(mode, api_version,
+                           endpoint, key,
+                           image_file):
     # Remove the background from the image or generate a foreground matte
     print('\nRemoving background from image...')
         
