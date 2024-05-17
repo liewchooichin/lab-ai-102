@@ -47,8 +47,7 @@ def AnalyzeImage(image_filename, image_data, cv_client):
 
     try:
         # Get result with specified features to be retrieved
-        
-
+      
     except HttpResponseError as e:
         print(f"Status code: {e.status_code}")
         print(f"Reason: {e.reason}")
