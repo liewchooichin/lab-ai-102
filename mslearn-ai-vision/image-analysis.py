@@ -178,9 +178,11 @@ def BackgroundForeground(endpoint, key, image_file):
     # To get foreground matte: mode="foregroundMatting"
     # To remove background: mode="backgroundRemoval"
     mode="backgroundRemoval" # Can be "foregroundMatting" or "backgroundRemoval"
-    
+
+    # Run 1: mode='backgroundRemoval'
+    # Run 2: mode='foregroundMatting'
     # Remove the background from the image or generate a foreground matte
-    which_background_mode(mode="backgroundRemoval",
+    which_background_mode(mode="foregroundMatting",
                            api_version=api_version,
                            endpoint=endpoint,
                            key=key,
