@@ -177,7 +177,7 @@ def BackgroundForeground(endpoint, key, image_file):
     api_version = "2023-02-01-preview"
     # To get foreground matte: mode="foregroundMatting"
     # To remove background: mode="backgroundRemoval"
-    mode="backgroundRemoval" # Can be "foregroundMatting" or "backgroundRemoval"
+    #mode="backgroundRemoval" # Can be "foregroundMatting" or "backgroundRemoval"
 
     # Run 1: mode='backgroundRemoval'
     # Run 2: mode='foregroundMatting'
