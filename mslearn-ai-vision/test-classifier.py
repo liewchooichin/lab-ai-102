@@ -8,10 +8,10 @@ def main():
     try:
         # Get Configuration Settings
         load_dotenv()
-        prediction_endpoint = os.getenv('PredictionEndpoint')
-        prediction_key = os.getenv('PredictionKey')
-        project_id = os.getenv('ProjectID')
-        model_name = os.getenv('ModelName')
+        prediction_endpoint = os.getenv('PREDICTIONENDPOINTVISION')
+        prediction_key = os.getenv('PREDICTIONKEYVISION')
+        project_id = os.getenv('ProjectIDFruit')
+        model_name = os.getenv('ModelNameFruit')
 
         # Authenticate a client for the training API
         credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
