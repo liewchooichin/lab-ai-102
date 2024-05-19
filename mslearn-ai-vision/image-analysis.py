@@ -11,6 +11,12 @@ from azure.ai.vision.imageanalysis import ImageAnalysisClient
 from azure.ai.vision.imageanalysis.models import VisualFeatures
 from azure.core.credentials import AzureKeyCredential
 
+# Comment by Chooi Chin
+# The program need to read in the image that is
+# specified in the argument.
+# Run the file with argument like images/building.jpg.
+# For example,
+# python image-analysis.py images/person.jpg
 
 def main():
     global cv_client
