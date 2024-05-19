@@ -12,8 +12,8 @@ def main():
     try:
         # Get Configuration Settings
         load_dotenv()
-        training_endpoint = os.getenv('TrainingEndpointVision')
-        training_key = os.getenv('TrainingKeyVision')
+        training_endpoint = os.getenv('TRAININGENDPOINTVISION')
+        training_key = os.getenv('TRAININGKEYVISION')
         project_id = os.getenv('ProjectIDFruit')
 
         # Authenticate a client for the training API
