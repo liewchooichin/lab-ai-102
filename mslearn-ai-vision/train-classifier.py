@@ -12,9 +12,9 @@ def main():
     try:
         # Get Configuration Settings
         load_dotenv()
-        training_endpoint = os.getenv('TrainingEndpoint')
-        training_key = os.getenv('TrainingKey')
-        project_id = os.getenv('ProjectID')
+        training_endpoint = os.getenv('TrainingEndpointVision')
+        training_key = os.getenv('TrainingKeyVision')
+        project_id = os.getenv('ProjectIDFruit')
 
         # Authenticate a client for the training API
         credentials = ApiKeyCredentials(in_headers={"Training-key": training_key})
