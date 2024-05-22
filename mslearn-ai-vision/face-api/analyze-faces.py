@@ -43,13 +43,13 @@ def main():
         # Match the number to the images to be analyzed
         # This is version 3.9 on Debian in the .devcontainer.
         # match is only supported in python >= 3.10.
-        if command == 1:
+        if command == '1':
                 DetectFaces(os.path.join('images','people.jpg'))
-        elif command == 2:
+        elif command == '2':
                 DetectFaces(os.path.join('images','people2.jpg'))
-        elif command == 3:
+        elif command == '3':
                 DetectFaces(os.path.join('images','person1.jpg'))
-        elif command == 4:
+        elif command == '4':
                 DetectFaces(os.path.join('images','person2.jpg'))
         else:
              print("Exit")
