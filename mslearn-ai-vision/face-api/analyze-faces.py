@@ -1,3 +1,9 @@
+# It analyzes an image file and detects any faces it contains, including 
+# attributes for occlusion, blur, and the presence of spectacles. The 
+# details of each face are displayed, including a unique face identifier
+# that is assigned to each face; and the location of the faces is indicated
+# on the image using a bounding box.
+
 from dotenv import load_dotenv
 import os
 from PIL import Image, ImageDraw
@@ -25,10 +31,25 @@ def main():
         face_client = FaceClient(cog_endpoint, credentials)
 
         # Menu for face functions
-        print('1: Detect faces\nAny other key to quit')
+        print('Enter a number to detect faces.\nAny other key to quit')
+        print('1: people.jpg')
+        print('2: people2.jpg')
+        print('3: person1.jpg')
+        print('4: person2.jpg')
         command = input('Enter a number:')
-        if command == '1':
-            DetectFaces(os.path.join('images','people.jpg'))
+        # Original code
+        #if command == '1':
+            #DetectFaces(os.path.join('images','people.jpg'))
+        # Match the number to the images to be analyzed
+        match command:
+            case 1:
+                DetectFaces(os.path.join('images','people.jpg'))
+            case 2:
+                DetectFaces(os.path.join('images','people2.jpg'))
+            case 3:
+                DetectFaces(os.path.join('images','person1.jpg'))
+            case 4:
+                DetectFaces(os.path.join('images','person2.jpg'))
 
     except Exception as ex:
         print(ex)
