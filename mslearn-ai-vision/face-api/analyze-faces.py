@@ -41,23 +41,25 @@ def main():
         #if command == '1':
             #DetectFaces(os.path.join('images','people.jpg'))
         # Match the number to the images to be analyzed
-        match command:
-            case 1:
+        # This is version 3.9 on Debian in the .devcontainer.
+        # match is only supported in python >= 3.10.
+        if command == 1:
                 DetectFaces(os.path.join('images','people.jpg'))
-            case 2:
+        elif command == 2:
                 DetectFaces(os.path.join('images','people2.jpg'))
-            case 3:
+        elif command == 3:
                 DetectFaces(os.path.join('images','person1.jpg'))
-            case 4:
+        elif command == 4:
                 DetectFaces(os.path.join('images','person2.jpg'))
-
+        else:
+             print("Exit")
     except Exception as ex:
         print(ex)
 
 def GetFaces(image_file, features):
     # Get faces
-with open(image_file, mode="rb") as image_data:
-    detected_faces = face_client.face.detect_with_stream(image=image_data,
+    with open(image_file, mode="rb") as image_data:
+        detected_faces = face_client.face.detect_with_stream(image=image_data,
                                                             return_face_attributes=features,                     return_face_id=False)
 
     if len(detected_faces) > 0:
