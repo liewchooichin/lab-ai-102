@@ -60,7 +60,8 @@ def GetFaces(image_file, features):
     # Get faces
     with open(image_file, mode="rb") as image_data:
         detected_faces = face_client.face.detect_with_stream(image=image_data,
-                                                            return_face_attributes=features,                     return_face_id=False)
+                                                            return_face_attributes=features,                     
+                                                            return_face_id=False)
 
     if len(detected_faces) > 0:
         print(len(detected_faces), 'faces detected.')
