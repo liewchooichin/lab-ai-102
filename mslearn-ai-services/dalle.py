@@ -8,10 +8,10 @@ def main():
     try:
         # Get Azure OpenAI Service settings
         #load_dotenv()
-        api_base = os.getenv("AZURE_OAI_ENDPOINT")
-        api_key = os.getenv("AZURE_OAI_KEY")
-        #api_base = "https://ai-liewchooichinai332570984656.openai.azure.com/"
-        #api_key = "41a6a34bc34a406db3cc162bb9a3f945"
+        #api_base = os.getenv("AZURE_OAI_ENDPOINT")
+        #api_key = os.getenv("AZURE_OAI_KEY")
+        api_base = os.getenv("OPENAI_DALLE")
+        api_key = os.getenv("OPENAI_DALLE_KEY")
         api_version = '2024-02-15-preview'
         
         # Get prompt for image to be generated
