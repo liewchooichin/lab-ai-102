@@ -15,10 +15,14 @@ allowSelfSignedHttps(True) # this line is needed if you use self-signed certific
 # depending on the format your endpoint expects.
 # More information can be found here:
 # https://docs.microsoft.com/azure/machine-learning/how-to-deploy-advanced-entry-script
+
+# My prompt
+# original: "prompt"
+prompt = "A tabby cat jumping over a rainbow."
 data =  {
   "input_data": {
     "columns": [
-      "prompt",
+      prompt,
       "image",
       "mask_image"
     ],
