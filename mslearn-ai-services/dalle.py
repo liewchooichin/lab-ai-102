@@ -1,45 +1,37 @@
-import requests
-import time
+
 import os
-from dotenv import load_dotenv
+import httpx
+from openai import AzureOpenAI
+from PIL import Image
 
-def main(): 
-        
-    try:
-        # Get Azure OpenAI Service settings
-        #load_dotenv()
-        #api_base = os.getenv("AZURE_OAI_ENDPOINT")
-        #api_key = os.getenv("AZURE_OAI_KEY")
-        api_base = os.getenv("OPENAI_DALLE")
-        api_key = os.getenv("OPENAI_DALLE_KEY")
-        api_version = '2024-02-15-preview'
-        
-        # Get prompt for image to be generated
-        #prompt = input("\nEnter a prompt to request an image: ")
-        prompt = "A cat playing on a rainbow."
-        
-        # Call the DALL-E model
-        url = "{}openai/deployments/dalle3/images/generations?api-version={}".format(api_base, api_version)
-        headers= { "api-key": api_key, "Content-Type": "application/json" }
-        body = {
-            "prompt": prompt,
-            "n": 1,
-            "size": "256x256"
-        }
-        response = requests.post(url, headers=headers, json=body)
-
-        # Get the revised prompt and image URL from the response
-        revised_prompt = response.json()['data'][0]['revised_prompt']
-        image_url = response.json()['data'][0]['url']
-
-        # Display the URL for the generated image
-        print(revised_prompt)
-        print(image_url)
-        
-
-    except Exception as ex:
-        print(ex)
-
-if __name__ == '__main__': 
-    main()
-
+client = AzureOpenAI(
+    api_version="2024-02-01",  
+    api_key=os.environ["OPENAI_DALLE_KEY"],  
+    azure_endpoint=os.environ['OPENAI_DALLE']
+)
+            
+result = client.images.generate(
+    model="dalle3", # the name of your DALL-E 3 deployment
+    prompt="a cat playing among the stars",
+    n=1
+ )
+            
+# Set the directory for the stored image
+image_dir = os.path.join(os.curdir, 'images')
+            
+# If the directory doesn't exist, create it
+if not os.path.isdir(image_dir):
+    os.mkdir(image_dir)
+            
+# Initialize the image path (note the filetype should be png)
+image_path = os.path.join(image_dir, 'generated_image.png')
+            
+# Retrieve the generated image
+image_url = result.data[0].url  # extract image URL from response
+generated_image = httpx.get(image_url).content  # download the image
+with open(image_path, "wb") as image_file:
+    image_file.write(generated_image)
+            
+# Display the image in the default image viewer
+image = Image.open(image_path)
+image.show()
