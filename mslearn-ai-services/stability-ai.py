@@ -8,7 +8,7 @@ def allowSelfSignedHttps(allowed):
     if allowed and not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None):
         ssl._create_default_https_context = ssl._create_unverified_context
 
-allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
+#allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
 
 # Request data goes here
 # The example below assumes JSON formatting which may be updated
