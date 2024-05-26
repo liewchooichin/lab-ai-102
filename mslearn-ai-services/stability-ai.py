@@ -8,20 +8,23 @@ def main():
     try:
         # Get Azure OpenAI Service settings
         #load_dotenv()
-        api_base = os.getenv("AZURE_OAI_ENDPOINT")
-        api_key = os.getenv("AZURE_OAI_KEY")
+        #api_base = os.getenv("AZURE_OAI_ENDPOINT")
+        #api_key = os.getenv("AZURE_OAI_KEY")
+        api_base = "https://ai-liewchooichinai332570984656.openai.azure.com/"
+        api_key = "41a6a34bc34a406db3cc162bb9a3f945"
         api_version = '2024-02-15-preview'
         
         # Get prompt for image to be generated
-        prompt = input("\nEnter a prompt to request an image: ")
-
+        #prompt = input("\nEnter a prompt to request an image: ")
+        prompt = "A cat playing on a rainbow."
+        
         # Call the DALL-E model
         url = "{}openai/deployments/dalle3/images/generations?api-version={}".format(api_base, api_version)
         headers= { "api-key": api_key, "Content-Type": "application/json" }
         body = {
             "prompt": prompt,
             "n": 1,
-            "size": "1024x1024"
+            "size": "256x256"
         }
         response = requests.post(url, headers=headers, json=body)
 
