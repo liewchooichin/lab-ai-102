@@ -13,6 +13,7 @@ Enter a number:1
 ```
 
 ## Results
+
 ```
 Text:
   IN THIS TEMPLE
