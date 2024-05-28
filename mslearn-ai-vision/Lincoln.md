@@ -51,3 +51,4 @@ Text:
     Word: 'FOREVER', Bounding Polygon: ((431, 255), (510, 253), (511, 268), (431, 270)), Confidence: 0.9950
 ```
 
+
