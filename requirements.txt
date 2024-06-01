@@ -6,6 +6,7 @@ azure-ai-vision-imageanalysis==1.0.0b1
 azure-cognitiveservices-vision-customvision==3.1.0
 azure-cognitiveservices-vision-face==0.6.0
 azure-ai-language-questionanswering
+azure-ai-language-conversations
 openai
 Pillow
 matplotlib
