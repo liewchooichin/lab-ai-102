@@ -141,8 +141,8 @@ def GetTime(location):
     elif location.lower() == 'tokyo':
         time = datetime.now(timezone.utc) + timedelta(hours=9)
         time_string = '{}:{:02d}'.format(time.hour,time.minute)
-    elif location.lower() == 'delhi':
-        time = datetime.now(timezone.utc) + timedelta(hours=5.5)
+    elif location.lower() == 'singapore':
+        time = datetime.now(timezone.utc) + timedelta(hours=8)
         time_string = '{}:{:02d}'.format(time.hour,time.minute)
     else:
         time_string = "I don't know what time it is in {}".format(location)
