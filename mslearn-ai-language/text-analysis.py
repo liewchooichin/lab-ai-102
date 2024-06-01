@@ -2,9 +2,9 @@ from dotenv import load_dotenv
 import os
 
 # Import namespaces
- # import namespaces
- from azure.core.credentials import AzureKeyCredential
- from azure.ai.textanalytics import TextAnalyticsClient
+# import namespaces
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.textanalytics import TextAnalyticsClient
 
 def main():
     try:
