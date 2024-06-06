@@ -38,7 +38,7 @@ def main():
             project_name=project_name,
             deployment_name=deployment_name
         )
-
+        # Get the batched documents from the language client
         document_results = operation.result()
 
         for doc, classification_result in zip(files, document_results):
