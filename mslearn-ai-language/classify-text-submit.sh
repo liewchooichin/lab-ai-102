@@ -1,0 +1,4 @@
+#!/bin/bash
+# Prediction url
+# https://langlcc002.cognitiveservices.azure.com/language/analyze-text/jobs?api-version=2022-10-01-preview
+curl -X POST "https://langlcc002.cognitiveservices.azure.com/language/analyze-text/jobs?api-version=2022-10-01-preview" -H "Ocp-Apim-Subscription-Key: 1035b996bc524e52bb219a8bbcf26ef2" -H "Content-Type: application/json" -d "{\"tasks\":[{\"kind\":\"CustomSingleLabelClassification\",\"parameters\":{\"projectName\":\"ClassifyLab\",\"deploymentName\":\"articles\"}}],\"displayName\":\"CustomTextPortal_CustomSingleLabelClassification\",\"analysisInput\":{\"documents\":[{\"id\":\"document_CustomSingleLabelClassification\",\"text\":\"YOUR_DOCUMENT_HERE\",\"language\":\"YOUR_DOCUMENT_LANGUAGE_HERE\"}]}}"
