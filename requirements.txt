@@ -1,10 +1,11 @@
 python-dotenv
-azure-ai-textanalytics==5.3.0
-azure-identity==1.5.0
-azure-keyvault-secrets==4.2.0
-azure-ai-vision-imageanalysis==1.0.0b1
-azure-cognitiveservices-vision-customvision==3.1.0
-azure-cognitiveservices-vision-face==0.6.0
+azure-ai-textanalytics
+azure-ai-translation-text
+azure-identity
+azure-keyvault-secrets
+azure-ai-vision-imageanalysis
+azure-cognitiveservices-vision-customvision
+azure-cognitiveservices-vision-face
 azure-ai-language-questionanswering
 azure-ai-language-conversations
 openai
