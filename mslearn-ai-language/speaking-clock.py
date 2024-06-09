@@ -1,8 +1,8 @@
-# This file needs to be run locally to make use of the speaker and 
-# the microphone.
-# the library playsound will not work in Codespaces.
+# The audio file is setup to be run from reading
+# the input "audio/time.wav". The output is stored in
+# "audio/tell-time.wav".
 
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from datetime import datetime
 import os
 
@@ -37,14 +37,19 @@ def TranscribeCommand():
 
     # Configure speech recognition
     # Configure speech recognition
-    audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
+    inputFile = './audio/time.wav'
+    audio_config = speech_sdk.AudioConfig(filename=inputFile)
     speech_recognizer = speech_sdk.SpeechRecognizer(speech_config, audio_config)
-    print('Speak now...')
+    print(f'Processing audio input: {inputFile}')
 
     # Process speech input
     # Process speech input
     speech = speech_recognizer.recognize_once_async().get()
     if speech.reason == speech_sdk.ResultReason.RecognizedSpeech:
+        print("speech.properties")
+        print(speech.properties)
+        print(f"Reason: {speech.reason}")
+        print("Text from the speech:")
         command = speech.text
         print(command)
     else:
@@ -62,15 +67,23 @@ def TellTime():
     now = datetime.now()
     response_text = 'The time is {}:{:02d}'.format(now.hour,now.minute)
 
+    # Speech output file
+    outputFile = "./audio/tell-time.wav"
+    audio_config = speech_sdk.audio.AudioConfig(filename=outputFile)
+    print(f"Speech output file: {outputFile}")
+
     # Configure speech synthesis
     # Configure speech synthesis
     # To use other voices: change this 'en-GB-LibbyNeural' 
     speech_config.speech_synthesis_voice_name = "en-GB-RyanNeural"
-    speech_synthesizer = speech_sdk.SpeechSynthesizer(speech_config)
+    speech_synthesizer = speech_sdk.SpeechSynthesizer(
+        speech_config=speech_config, audio_config=audio_config)
 
     # Synthesize spoken output
     # Synthesize spoken output
     speak = speech_synthesizer.speak_text_async(response_text).get()
+    print("Text to speech")
+    print(f"Reasons: {speak.reason}")
     if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
         print(speak.reason)
     # Using SSML
@@ -84,6 +97,7 @@ def TellTime():
             </voice> \
         </speak>".format(response_text)
     speak = speech_synthesizer.speak_ssml_async(responseSsml).get()
+    print(f"Reason: {speak.reason}")
     if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
         print(speak.reason)
 
