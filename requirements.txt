@@ -7,3 +7,4 @@ azure-cognitiveservices-speech==1.30.0
 openai
 Pillow
 matplotlib
+playsound==1.2.2
