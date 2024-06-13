@@ -10,10 +10,10 @@ from azure.search.documents import SearchClient
 app = Flask(__name__)
 
 # Azure Search constants
-load_dotenv()
-search_endpoint = os.getenv('SEARCH_SERVICE_ENDPOINT')
-search_key = os.getenv('SEARCH_SERVICE_QUERY_KEY')
-search_index = os.getenv('SEARCH_INDEX_NAME')
+#load_dotenv()
+search_endpoint = os.getenv('SEARCH_ENDPOINT')
+search_key = os.getenv('SEARCH_QUERY_KEY')
+search_index = "margies-index" # os.getenv('SEARCH_INDEX_NAME')
 
 # Wrapper function for request to search index
 def search_query(search_text, filter_by=None, sort_order=None):
