@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 
-
 app = Flask(__name__)
 
 # Azure Search constants
@@ -23,7 +22,6 @@ def search_query(search_text, filter_by=None, sort_order=None):
         azure_credential = AzureKeyCredential(search_key)
         search_client = SearchClient(search_endpoint, search_index, azure_credential)
         
-
         # Submit search query
         results =  search_client.search(search_text,
                                         search_mode="all",
