@@ -1,0 +1,9 @@
+{
+    "azureFunctions.deploySubpath": "mslearn-ai-search/movies/movie-genre-function",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.projectSubpath": "mslearn-ai-search/movies/movie-genre-function"
+}
