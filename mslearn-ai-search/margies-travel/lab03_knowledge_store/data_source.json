@@ -1,0 +1,10 @@
+{   
+    "name" : "margies-data",  
+    "description" : "Documents for search.",  
+    "type" : "azureblob",
+    "credentials" :
+    {
+        "connectionString" : "STORAGE_CONNECTION_STRING"
+    },  
+    "container" : { "name" : "margies" }
+} 
