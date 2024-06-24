@@ -12,7 +12,9 @@
 		"vscode": {
 			"extensions": [
 				"ms-python.python",
-				"ms-python.vscode-pylance"
+				"ms-python.vscode-pylance",
+				"ms-azuretools.vscode-azurefunctions",
+				"ms-vscode.vscode-node-azure-pack"
 			]
 		}
 	}
