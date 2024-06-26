@@ -16,3 +16,7 @@ Receipt items:
 
 Analysis complete.
 ```
+
+The image from Document Intelligence Studio:
+
+![analyzed receipt with bounding box](./receipt_analyzed.png)

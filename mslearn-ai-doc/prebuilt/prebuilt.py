@@ -23,12 +23,12 @@ document_analysis_client = DocumentAnalysisClient(
  )
 
 # Analyse the invoice
-poller = document_analysis_client.begin_analyze_document_from_url(
+task = document_analysis_client.begin_analyze_document_from_url(
      fileModelId, fileUri, locale=fileLocale
  )
 
 # Display invoice information to the user
-receipts = poller.result()
+receipts = task.result()
 for idx, receipt in enumerate(receipts.documents):
 
     vendor_name = receipt.fields.get("VendorName")
