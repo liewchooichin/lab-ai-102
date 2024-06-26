@@ -10,6 +10,7 @@ azure-cognitiveservices-vision-face==0.6.0
 azure-cognitiveservices-speech==1.30.0
 azure-search-documents==11.0.0
 azure-ai-documentintelligence==1.0.0b3
+azure-ai-formrecognizer==3.3.0
 Pillow
 matplotlib
 flask
